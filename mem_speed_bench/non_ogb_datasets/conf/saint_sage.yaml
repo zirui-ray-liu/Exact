@@ -1,0 +1,61 @@
+name: graph_saint
+
+params:
+  reddit:
+    sampler:
+      walk_length: 4
+      sample_coverage: 0
+      batch_size: 2000
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 128
+      dropout: 0.1
+      batch_norm: true
+      residual: false
+      use_linear: false
+    optim: adam
+    lr: 0.01
+    epochs: 40
+    eval_start_epoch: 1
+    eval_steps: 1
+    log_steps: 1
+
+  flickr:
+    sampler:
+      walk_length: 2
+      sample_coverage: 0
+      batch_size: 6000
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 256
+      dropout: 0.2
+      batch_norm: true
+      residual: false
+    optim: adam
+    lr: 0.01
+    epochs: 15
+    eval_start_epoch: 1
+    eval_steps: 1
+    log_steps: 1
+
+  yelp:
+    sampler:
+      walk_length: 2
+      sample_coverage: 0
+      batch_size: 1250
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 512
+      dropout: 0.1
+      batch_norm: true
+      residual: false
+      use_linear: false
+    optim: adam
+    lr: 0.01
+    epochs: 75
+    eval_start_epoch: 10
+    eval_steps: 1
+    log_steps: 1  

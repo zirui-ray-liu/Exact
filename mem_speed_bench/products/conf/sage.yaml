@@ -1,0 +1,15 @@
+name: SAGE
+loop: false
+normalize: false
+architecture:
+  num_layers: 3
+  hidden_channels: 256
+  dropout: 0.5
+  batch_norm: false
+  residual: false
+
+grad_norm: 0.5
+optim: adam
+lr: 0.002
+epochs: 500
+log_steps: 1

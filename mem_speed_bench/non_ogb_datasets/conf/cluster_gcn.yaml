@@ -1,0 +1,64 @@
+name: cluster_gcn
+
+params:
+  reddit:
+    sampler:
+      num_parts: 1500 # 155 nodes per cluster
+      save_dir: ./data/Reddit2/processed
+      recursive: False
+      batch_size: 20
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 128
+      dropout: 0.2
+      batch_norm: true
+      residual: false
+      use_linear: false
+    optim: adam
+    lr: 0.01
+    epochs: 40
+    eval_start_epoch: 10
+    eval_steps: 1
+    log_steps: 1
+
+  flickr:
+    sampler:
+      num_parts: 1000 # 89.25 nodes per cluster
+      save_dir: ./data/Flickr/processed
+      recursive: False
+      batch_size: 30
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 256
+      dropout: 0.2
+      batch_norm: true
+      residual: false
+    optim: adam
+    lr: 0.01
+    epochs: 15
+    eval_start_epoch: 1
+    eval_steps: 1
+    log_steps: 1
+
+  yelp:
+    sampler:
+      num_parts: 5000 # 143.37 nodes per cluster
+      save_dir: ./data/YELP/processed
+      recursive: False
+      batch_size: 20
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 512
+      dropout: 0.1
+      batch_norm: true
+      residual: false
+      use_linear: false
+    optim: adam
+    lr: 0.01
+    epochs: 75
+    eval_start_epoch: 10
+    eval_steps: 1
+    log_steps: 1  

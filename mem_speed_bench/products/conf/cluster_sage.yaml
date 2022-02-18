@@ -1,0 +1,18 @@
+name: cluster_gcn
+sampler:
+  num_parts: 15000
+  save_dir: ./data/OGB/ogbn_products/processed
+  recursive: False
+arch_name: SAGE
+architecture:
+  num_layers: 3
+  hidden_channels: 256
+  dropout: 0.5
+  batch_norm: false
+  residual: false
+optim: adam
+lr: 0.001
+epochs: 50
+eval_start_epoch: 29
+eval_steps: 5
+log_steps: 1

@@ -1,0 +1,23 @@
+name: GAT
+loop: true
+normalize: true
+architecture:
+  num_layers: 3
+  num_heads: 3
+  hidden_channels: 128
+  dropout: 0.75
+  batch_norm: true
+  input_drop: 0.25
+  attn_drop: 0.0
+  edge_drop: 0.7
+  use_attn_dst: false
+  residual: true
+
+optim: rmsprop
+adjust_lr: true
+use_labels: true
+mask_rate: 0.5
+n_label_iters: 0
+lr: 0.002
+epochs: 2000
+log_steps: -1

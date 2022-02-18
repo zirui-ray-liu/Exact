@@ -1,0 +1,20 @@
+name: graph_saint
+inductive: False
+sampler:
+  walk_length: 3
+  num_steps: 30
+  sample_coverage: 0
+arch_name: SAGE
+architecture:
+  num_layers: 3
+  hidden_channels: 256
+  dropout: 0.5
+  batch_norm: false
+  residual: false
+optim: adam
+# grad_norm: 0.5
+lr: 0.01
+epochs: 20
+eval_start_epoch: 9
+eval_steps: 2
+log_steps: 1

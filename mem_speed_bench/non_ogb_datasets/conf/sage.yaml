@@ -1,0 +1,40 @@
+name: SAGE
+norm: false
+loop: false
+
+params:
+  reddit:
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 256
+      dropout: 0.5
+      batch_norm: true
+      residual: false
+    optim: adam
+    lr: 0.01
+    epochs: 400
+
+  flickr:
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 256
+      dropout: 0.3
+      batch_norm: true
+      residual: false
+    optim: adam
+    lr: 0.01
+    epochs: 400
+
+  yelp:
+    arch_name: SAGE
+    architecture:
+      num_layers: 2
+      hidden_channels: 512
+      dropout: 0.1
+      batch_norm: true
+      residual: false
+    optim: adam
+    lr: 0.01
+    epochs: 500
