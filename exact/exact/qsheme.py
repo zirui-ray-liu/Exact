@@ -19,11 +19,6 @@ class QScheme(object):
     def __init__(self, name):
         self.initial_bits = config.initial_bits
         self.bits = config.activation_compression_bits[0]
-        # if config.use_gradient:
-        #     assert QScheme.num_samples > 1
-        #     self.scales = torch.zeros(QScheme.num_samples)
-        # else:
-        #     self.scales = torch.tensor([0.0])
         QScheme.layers.append(self)
 
         assert name in ['linear', 'matmul', 'batchnorm', 'sage']

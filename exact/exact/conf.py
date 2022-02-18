@@ -1,12 +1,3 @@
-import ast
-import os
-import warnings
-
-
-def set_optimization_level(level):
-    raise NotImplementedError
-
-
 class QuantizationConfig:
     def __init__(self):
         self.compress_activation = True
