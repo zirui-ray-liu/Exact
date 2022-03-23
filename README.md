@@ -18,6 +18,9 @@ pip install -v -e .
 ```
 
 ## Reproduce results
+### Important note
+
+The default setting is applying INT8 quantization to activations. If you want to get the results without quantization. Please add ```--act_fp``` kwargs
 
 ### Reproduce ogbn-arxiv results.
 ```bash
